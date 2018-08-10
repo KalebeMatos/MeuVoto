@@ -1,0 +1,50 @@
+﻿@{
+	ViewData["Title"] = "Login";
+}
+
+<div class="content" style="display: flex;justify-content: center;padding-top: 3%;">
+	<form action="/Home/Login" method="get">
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#Cadastro">Cadastro</a></li>
+			<li><a data-toggle="tab" href="#Login">Login</a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="Cadastro" class="tab-pane fade in active">
+				<h3>Cadastro</h3>
+				<div class="form-group">
+					<label for="txtCpf">CPF</label>
+					<input type="text" class="form-control" id="txtCpf" name="cpf" aria-describedby="cpfHelp" placeholder="CPF">
+					<small id="cpfHelp" class="form-text text-muted">Informe um cpf valido e existente, será validado posteriormente.</small>
+				</div>
+				<div class="form-group">
+					<label for="txtNascimento">Data Nascimento</label>
+					<input type="datetime-local" class="form-control" id="txtNascimento" placeholder="Data de Nascimento">
+				</div>
+				<div class="form-group">
+					<label for="txtSenha">Senha</label>
+					<input type="password" class="form-control" id="txtSenha" placeholder="Senha">
+				</div>
+				<!--Fim Cadastro-->
+			</div>
+			<div id="Login" class="tab-pane fade">
+				<!--Login-->
+				<h3>Login</h3>
+				<div class="form-group">
+					<label for="txtCpf1">CPF</label>
+					<input type="text" class="form-control" id="txtCpf1" name="cpf" placeholder="CPF">
+				</div>
+				<div class="form-group">
+					<label for="txtSenha1">Senha</label>
+					<input type="password" class="form-control" name="senha" id="txtSenha1" placeholder="Senha">
+				</div>
+				<!--Fim Login-->
+			</div>			
+		</div>
+		@*<div class="form-check">
+			<input type="checkbox" class="form-check-input" id="exampleCheck1">
+			<label class="form-check-label" for="exampleCheck1">Check me out</label>
+		</div>*@
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+</div>
